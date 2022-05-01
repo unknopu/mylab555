@@ -1,0 +1,980 @@
+{
+	"info": {
+		"_postman_id": "78745e6f-e1b4-4301-8683-62a733672e0e",
+		"name": "$$$$$$$$$$$$$$$ project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "new comment（回复好友日志）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"description": "好友的号码",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "1f41239b-ee61-443d-ac17-24f47a438dc8",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "that's actually not!!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/cr/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"cr",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comments（查询日志的回复）",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/cr/comment?postId=1f41239b-ee61-443d-ac17-24f47a438dc8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"cr",
+								"comment"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "1f41239b-ee61-443d-ac17-24f47a438dc8"
+								},
+								{
+									"key": "content",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "new post（发表日志）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "hahaha, it's so haha",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								""
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "share post（分享日志）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "postId",
+									"value": "806671db-19e7-4a5f-8a65-bee8e961b1a7",
+									"type": "text"
+								},
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "hahaha, it's so haha",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/post/share",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"share"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit post（修改日志）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "postId",
+									"value": "806671db-19e7-4a5f-8a65-bee8e961b1a7",
+									"type": "text"
+								},
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "eeeeeeeeeeeeeeeeeeeeeeeeeee",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/post/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove post（删除日志）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "64f6311f-06e1-4870-a154-7bc9a4cfc209",
+									"description": "owner's id.",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "130219fc-27b7-4ac6-a8d8-5436d9a2eea8",
+									"description": "would to be remove.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/post/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"remove"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get friend's post（索搜好友的日志）",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/post/?userRefId=8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								""
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com"
+								},
+								{
+									"key": "content",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "discover post（显示好友的日志）",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1323/api/v1/post/discover?userRefId=8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"discover"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com"
+								},
+								{
+									"key": "content",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "background",
+			"item": [
+				{
+					"name": "edu（查看自己的学习经历）",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1323/api/v1/main/edu?userRefId=e9bc2e8e-9b0b-4faf-94a1-a54e30a4a52a",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"edu"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": "e9bc2e8e-9b0b-4faf-94a1-a54e30a4a52a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "work（查询自己的工作经历）",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1323/api/v1/main/work?userRefId=6264ce1e-c253-4940-8ada-f6c8de3bebae",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"work"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": "6264ce1e-c253-4940-8ada-f6c8de3bebae"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit edu（修改学习经历）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text"
+								},
+								{
+									"key": "eduLv",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "start",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "degree",
+									"value": "topoftop",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1323/api/v1/main/edu",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"edu"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit work（修改工作经历）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "banker",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "krungthai",
+									"type": "text"
+								},
+								{
+									"key": "start",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1323/api/v1/main/work",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"work"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create user （用户注册）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "mockingjay3",
+									"type": "text"
+								},
+								{
+									"key": "realName",
+									"value": "CatNiip",
+									"type": "text"
+								},
+								{
+									"key": "birthDay",
+									"value": "12/01/1996",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jrp@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1323/api/v1/main/create",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login （用户登入）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:1323/api/v1/main/login?userName=li@l.com&password=123456",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"login"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "li@l.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "friend（查询自己的好友）",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1323/api/v1/main/friend?userRefId=8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"friend"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"description": "我的号码"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add friend（加好友）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "xxxxxxxx2",
+									"description": "我的号码",
+									"type": "text"
+								},
+								{
+									"key": "friendId",
+									"value": "yyyyyyyy2",
+									"description": "好友的号码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/main/addFriend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"addFriend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unfriend（删除好友）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"description": "我的用户号码",
+									"type": "text"
+								},
+								{
+									"key": "friendId",
+									"value": "ae0e67b1-c90f-43b0-b93a-5036f22b93a5",
+									"description": "好友的号码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/main/unFriend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"unFriend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "discover people（推荐人）",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1323/api/v1/main/people?userRefId=8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"people"
+							],
+							"query": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"description": "我的号码"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit profile（修改自己的信息）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text"
+								},
+								{
+									"key": "realName",
+									"value": "hahaha555",
+									"type": "text"
+								},
+								{
+									"key": "birthDay",
+									"value": "1997-09-28",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lnw@z.com,lnw2@l.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1323/api/v1/main/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"main",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reply",
+			"item": [
+				{
+					"name": "new reply（发表回复日志的回复）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"description": "我的号码",
+									"type": "text"
+								},
+								{
+									"key": "commentId",
+									"value": "cd404c68-3f02-4206-8d62-4cebb0e69478-comment",
+									"description": "回复日志的号码",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "that's actually not!!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/cr/reply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"cr",
+								"reply"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reply（查询日志信息的回复）",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userRefId",
+									"value": "8fdfd401-75b0-4564-b4e7-7a99d2d9d94b-li@l.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1323/api/v1/cr/reply?commentId=cd404c68-3f02-4206-8d62-4cebb0e69478-comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1323",
+							"path": [
+								"api",
+								"v1",
+								"cr",
+								"reply"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "cd404c68-3f02-4206-8d62-4cebb0e69478-comment"
+								},
+								{
+									"key": "content",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
